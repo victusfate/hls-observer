@@ -18,5 +18,10 @@
   ],
   "author": "Marc Ferrer",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "chokidar": "^1.3.0",
+    "request": "^2.67.0",
+    "valid-url": "^1.0.9"
+  }
 }
