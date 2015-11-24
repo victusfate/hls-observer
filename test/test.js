@@ -1,8 +1,8 @@
-var Watcher = require('../index');
+var HttpWatcher = require('../index');
 
 var sampleLiveStream = 'https://livestream.peer5.com/video/kite/index.m3u8';
 
-var w1 = new Watcher(sampleLiveStream);
+var w1 = new HttpWatcher(sampleLiveStream);
 
 w1.listenFile();
 
