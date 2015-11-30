@@ -1,16 +1,9 @@
 hls-observer
 ===============
 
-A network capable version of <a href="http://github.com/marc-ferrer/node-hlswatcher">node-hlswatcher</a> on which it is based. Each time the module have detects a change on the m3u8 file it triggers an event.
+A network capable version of <a href="http://github.com/marc-ferrer/node-hlswatcher">node-hlswatcher</a> on which it is based. Each time the module detects a change on the m3u8 file it triggers an event.
 
-The module is specially useful if you need to transcode a live video and send it to
-a CDN.
-
-## Install ##################################################################
-
-Easiest install is via npm:
-
-    $ npm install hls-observer
+The module is useful if you need send a live HLS manifest to a CDN.
 
 
 ## Usage ####################################################################
@@ -20,15 +13,15 @@ Require
 	var HttpObserver = require('hls-observer');
 
 After the require the first step is to create an object that represents your http observer.
-the constructor requires a path to the m3u8 file you want to watch over.
-A second parameter can be used to set the polling interval (in ms) used for checking the file,
-if not provided or not a number the default value (2000) is used.
+The constructor requires a url to the m3u8 file you want to watch over.
+A second parameter can be used to set the polling interval (in ms),
+if not proivided the default value (2000) is used.
 
-	var o1 = new HttpObserver('http://PATH/to/stream.m3u8');
+	var o1 = new HttpObserver('http://url/to/stream.m3u8');
 
 or
 
-	var o1 = new Watcher('PATH/to/file.m3u8',1000);
+	var o1 = new Watcher('http://url/to/stream.m3u8',1000);
 
 Once you have the object you need to call the method listenFile()
 
@@ -45,4 +38,4 @@ if you need to remember all of them you should store them in your own program.
 
 //Remember to stop the listener at the end.
 
-	w1.stop();
+	o1.stop();
