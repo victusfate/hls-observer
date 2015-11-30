@@ -8,6 +8,8 @@ The module is useful if you need send a live HLS manifest to a CDN.
 
 ## Usage ####################################################################
 
+*WARNING this is not functioning yet"
+
 Require
 
 	var HttpObserver = require('hls-observer');
