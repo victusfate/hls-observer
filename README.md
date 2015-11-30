@@ -1,7 +1,7 @@
 hls-observer
 ===============
 
-A network capable version of <a href="http://github.com/marc-ferrer/node-hlswatcher">node-hlswatcher</a> on which it is based. Each time the module detects a change on the m3u8 file it triggers an event.
+A network capable version of <a href="http://github.com/marc-ferrer/node-hlswatcher">node-hlswatcher</a> on which it is based. Each time the module detects a change on an m3u8 url it triggers an event.
 
 The module is useful if you need send a live HLS manifest to a CDN.
 
