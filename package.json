@@ -1,14 +1,14 @@
 {
-  "name": "hls-watcher",
-  "version": "1.1.6",
-  "description": "A node.js module that provides you with functionalities for m3u8 (hls) files watching",
+  "name": "hls-observer",
+  "version": "0.0.1",
+  "description": "A node.js module for observing remote m3u8 files",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/marc-ferrer/node-hlswatcher.git"
+    "url": "git://github.com/victusfate/hlsobserver.git"
   },
   "keywords": [
     "hls",
@@ -16,7 +16,7 @@
     "node",
     "watcher"
   ],
-  "author": "Marc Ferrer",
+  "author": "victusfate",
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {

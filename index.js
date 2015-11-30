@@ -23,6 +23,7 @@ function HttpWatcher(url, interval){
 	this.url = url;
 	log('set this.url',this.url);
 	this.previousSize = 0;
+	this.previousEtag = '';
 	this.intervalID = null;
 }
 
@@ -78,7 +79,12 @@ HttpWatcher.prototype.listenFile = function() {
 		// request(options, function(err,res,body) {
 		// request({ url: this.url, method: 'HEAD'}, function(err,res,body) {
 		request.head(this.url, function(err,res,body) {
-			log({ err: err, length: res.headers['content-length'], body: body}); // JSON.stringify(res.headers));
+			var etag = res.headers['etag'];
+			if (etag !== this.previousEtag) {
+				this.previousEtag = etag; 
+				log({ err: err, etagChanged: true}); 
+			}
+			log({ err: err, res: res, length: res.headers['content-length'], body: body}); // JSON.stringify(res.headers));
 	  });
 	}.bind(this), this.__interval);
 
